@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NailsLove by Ana - Landing Page Varianten</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f3ed 0%, #fdf8f4 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #3d3d39;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-family: Georgia, serif;
+        }
+        .subtitle {
+            color: #8b8b87;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+        }
+        .variants {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .variant {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .variant:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+        }
+        .variant h2 {
+            color: #c9a577;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .variant-link {
+            display: inline-block;
+            background: #8B6F5E;
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: background 0.2s;
+            font-weight: 500;
+        }
+        .variant-link:hover {
+            background: #6B5247;
+        }
+        .footer {
+            color: #8b8b87;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NailsLove by Ana</h1>
+        <p class="subtitle">Wähle eine Landing Page Variante</p>
+
+        <div class="variants">
+            <div class="variant">
+                <h2>Variante 1</h2>
+                <p style="color: #6b6b67; line-height: 1.6;">Option Final - Erste Designvariante</p>
+                <a href="option-final.html" class="variant-link">Anschauen →</a>
+            </div>
+
+            <div class="variant">
+                <h2>Variante 2</h2>
+                <p style="color: #6b6b67; line-height: 1.6;">Option 2 - Zweite Designvariante</p>
+                <a href="option2.html" class="variant-link">Anschauen →</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Premium nail studio branding | L'Hospitalet de Llobregat</p>
+        </div>
+    </div>
+</body>
+</html>
