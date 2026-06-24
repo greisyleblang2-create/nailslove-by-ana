@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leblang Automatisierung — Logo (Farben aus Foto)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{-webkit-font-smoothing:antialiased;}
+  body{margin:0;background:#E3DCD0;color:#38352F;
+    font-family:"Inter",-apple-system,Segoe UI,Arial,sans-serif;
+    padding:48px 24px 72px;}
+  .wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:40px;}
+  header{text-align:center;display:flex;flex-direction:column;gap:6px;}
+  header h1{font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#6B645A;margin:0;}
+  header p{font-size:12px;color:#8A8175;margin:0;}
+  .card{background:#EFEAE1;border:1px solid #D8CFC1;border-radius:14px;
+    padding:36px 40px 28px;display:flex;flex-direction:column;gap:22px;}
+  .card .label{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:#9A9082;}
+  .logo svg{display:block;width:100%;height:auto;}
+  .swatches{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid #E1D8CA;padding-top:18px;}
+  .sw{display:flex;align-items:center;gap:8px;font-size:11px;color:#6B645A;}
+  .sw .chip{width:22px;height:22px;border-radius:5px;border:1px solid rgba(0,0,0,0.12);}
+  .sw b{font-weight:600;color:#38352F;}
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <h1>Leblang Automatisierung</h1>
+      <p>Identisches Design — neue Farbpalette aus dem Foto · 2 Optionen</p>
+    </header>
+
+    <!-- ============ OPTION 1 — TAUPE & KOHLE ============ -->
+    <div class="card">
+      <span class="label">Option 1 · Taupe &amp; Kohle (warme Neutraltöne)</span>
+      <div class="logo">
+        <svg viewBox="0 0 484 158" role="img" aria-label="Leblang Automatisierung">
+          <!-- Kästchen -->
+          <g fill="#EFEAE1" stroke="#38352F" stroke-width="4">
+            <rect x="28" y="18"    width="40" height="22" rx="6"/>
+            <rect x="28" y="61.5"  width="40" height="22" rx="6"/>
+            <rect x="28" y="105"   width="40" height="22" rx="6"/>
+          </g>
+          <!-- Pfeil-Faden -->
+          <g stroke="#9E8467" stroke-width="3.5" fill="none" stroke-linecap="round">
+            <line x1="6" y1="29" x2="24.5" y2="29"/>
+            <path d="M71.5 29 A13 21.75 0 0 1 71.5 72.5"/>
+            <path d="M24.5 72.5 A13 21.75 0 0 0 24.5 116"/>
+            <line x1="71.5" y1="116" x2="461" y2="116"/>
+          </g>
+          <!-- Pfeilspitze -->
+          <g fill="#9E8467">
+            <polygon points="461,111.5 461,120.5 470,116"/>
+          </g>
+          <!-- Wortmarke -->
+          <text x="98" y="50" font-size="44" font-weight="600" letter-spacing="0.5" fill="#9E8467">LEBLANG</text>
+          <text x="98" y="96" font-size="44" font-weight="600" fill="#38352F" textLength="372" lengthAdjust="spacing">Automatisierung</text>
+          <text x="98" y="140" font-size="18" font-weight="400" fill="#38352F" fill-opacity="0.65">Prozesse automatisieren. Zeit gewinnen.</text>
+        </svg>
+      </div>
+      <div class="swatches">
+        <div class="sw"><span class="chip" style="background:#EFEAE1"></span>Creme <b>#EFEAE1</b></div>
+        <div class="sw"><span class="chip" style="background:#38352F"></span>Kohle <b>#38352F</b></div>
+        <div class="sw"><span class="chip" style="background:#9E8467"></span>Taupe <b>#9E8467</b></div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 2 — SALBEI & KOHLE ============ -->
+    <div class="card">
+      <span class="label">Option 2 · Salbei &amp; Kohle (Grün der Pflanze als Akzent)</span>
+      <div class="logo">
+        <svg viewBox="0 0 484 158" role="img" aria-label="Leblang Automatisierung">
+          <!-- Kästchen -->
+          <g fill="#EFEAE1" stroke="#38352F" stroke-width="4">
+            <rect x="28" y="18"    width="40" height="22" rx="6"/>
+            <rect x="28" y="61.5"  width="40" height="22" rx="6"/>
+            <rect x="28" y="105"   width="40" height="22" rx="6"/>
+          </g>
+          <!-- Pfeil-Faden -->
+          <g stroke="#6B7359" stroke-width="3.5" fill="none" stroke-linecap="round">
+            <line x1="6" y1="29" x2="24.5" y2="29"/>
+            <path d="M71.5 29 A13 21.75 0 0 1 71.5 72.5"/>
+            <path d="M24.5 72.5 A13 21.75 0 0 0 24.5 116"/>
+            <line x1="71.5" y1="116" x2="461" y2="116"/>
+          </g>
+          <!-- Pfeilspitze -->
+          <g fill="#6B7359">
+            <polygon points="461,111.5 461,120.5 470,116"/>
+          </g>
+          <!-- Wortmarke -->
+          <text x="98" y="50" font-size="44" font-weight="600" letter-spacing="0.5" fill="#6B7359">LEBLANG</text>
+          <text x="98" y="96" font-size="44" font-weight="600" fill="#38352F" textLength="372" lengthAdjust="spacing">Automatisierung</text>
+          <text x="98" y="140" font-size="18" font-weight="400" fill="#38352F" fill-opacity="0.65">Prozesse automatisieren. Zeit gewinnen.</text>
+        </svg>
+      </div>
+      <div class="swatches">
+        <div class="sw"><span class="chip" style="background:#EFEAE1"></span>Creme <b>#EFEAE1</b></div>
+        <div class="sw"><span class="chip" style="background:#38352F"></span>Kohle <b>#38352F</b></div>
+        <div class="sw"><span class="chip" style="background:#6B7359"></span>Salbei <b>#6B7359</b></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

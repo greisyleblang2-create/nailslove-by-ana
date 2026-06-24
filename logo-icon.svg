@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 132" role="img" aria-label="LEBLANG Automatisierung Bildmarke">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#A67C52"/>
+    </marker>
+  </defs>
+
+  <!-- Bronze Verbindungsfaden -->
+  <line x1="48" y1="4" x2="48" y2="128" stroke="#A67C52" stroke-width="2"/>
+
+  <!-- Box 1 (Eingang) -->
+  <rect x="16" y="10" width="64" height="32" rx="8" fill="#F7F5F2" stroke="#1A1A1A" stroke-width="1.5"/>
+  <!-- Box 2 (Verarbeitung) -->
+  <rect x="16" y="54" width="64" height="32" rx="8" fill="#F7F5F2" stroke="#1A1A1A" stroke-width="1.5"/>
+  <!-- Box 3 (Ausgang) -->
+  <rect x="16" y="98" width="64" height="32" rx="8" fill="#F7F5F2" stroke="#1A1A1A" stroke-width="1.5"/>
+
+  <!-- Eingangspfeil links (Mitte Box 1, y=26) -->
+  <line x1="1" y1="26" x2="15" y2="26" stroke="#A67C52" stroke-width="1.8" marker-end="url(#arr)"/>
+  <!-- Ausgangspfeil rechts (Mitte Box 3, y=114) -->
+  <line x1="81" y1="114" x2="95" y2="114" stroke="#A67C52" stroke-width="1.8" marker-end="url(#arr)"/>
+</svg>
