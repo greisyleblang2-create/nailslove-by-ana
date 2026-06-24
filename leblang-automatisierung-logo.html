@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leblang Automatisierung – Logo &amp; Markensystem</title>
+  <meta name="description" content="Premium Executive Logo-System für Leblang Automatisierung – zeitlos, minimalistisch, flaches Vektordesign.">
+
+  <!-- Favicon: SVG-Bildmarke als skalierbares Icon im Browser-Tab -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxRjFGMjIiLz48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNEOEM3QjQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSIxNiIgeT0iMyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiByeD0iNC41Ii8+PHJlY3QgeD0iMTYiIHk9IjI0IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHJ4PSI0LjUiLz48cmVjdCB4PSIxNiIgeT0iNDUiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgcng9IjQuNSIvPjxwYXRoIGQ9Ik04IDExSDI0VjUzSDQ0Ii8+PC9nPjxwYXRoIGQ9Ik00NCA0OSA1NCA1MyA0NCA1N1oiIGZpbGw9IiNEOEM3QjQiLz48L3N2Zz4=">
+
+  <style>
+    /* ============================================================
+       MARKEN-FARBPALETTE
+       ============================================================ */
+    :root{
+      --anthracite: #1F1F22;  /* Anthrazit   */
+      --beige:      #D8C7B4;  /* Warm Beige  */
+      --taupe:      #A79A8A;  /* Taupe       */
+      --cream:      #F3F0EA;  /* Creme       */
+      --white:      #FCFBF9;  /* Helle Karte */
+      --hairline:   rgba(31,31,34,.12);
+      --hairline-d: rgba(243,240,234,.16);
+      --sans: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    /* ============================================================
+       RESET / GRUNDLAGEN  (flach, keine Schatten, keine Verläufe)
+       ============================================================ */
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ -webkit-text-size-adjust:100%; }
+    body{
+      font-family:var(--sans);
+      background:var(--cream);
+      color:var(--anthracite);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    .wrap{
+      max-width:1080px;
+      margin:0 auto;
+      padding:clamp(2.5rem,6vw,6rem) clamp(1.25rem,5vw,3rem);
+    }
+
+    /* ============================================================
+       TYPOGRAFISCHE BAUSTEINE
+       ============================================================ */
+    .eyebrow{
+      font-size:.72rem;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+      color:var(--taupe);
+      font-weight:600;
+    }
+    .eyebrow--light{ color:var(--taupe); }
+
+    h1{
+      font-weight:600;
+      font-size:clamp(1.9rem,5vw,3rem);
+      letter-spacing:-.01em;
+      margin:.6rem 0 1rem;
+    }
+    h2{
+      font-weight:600;
+      font-size:clamp(1.2rem,3vw,1.55rem);
+      letter-spacing:-.005em;
+    }
+    .lead{
+      max-width:46ch;
+      color:#56524d;
+      font-size:clamp(1rem,2.2vw,1.12rem);
+    }
+    .desc{
+      max-width:54ch;
+      color:#6b665f;
+      margin-top:.4rem;
+      font-size:.96rem;
+    }
+
+    /* ============================================================
+       KOPFBEREICH
+       ============================================================ */
+    header.site{
+      border-bottom:1px solid var(--hairline);
+      padding-bottom:clamp(2rem,5vw,3.25rem);
+      margin-bottom:clamp(2.5rem,6vw,4.5rem);
+    }
+
+    /* ============================================================
+       SEKTIONEN
+       ============================================================ */
+    section{ margin-bottom:clamp(3rem,8vw,6rem); }
+    .sec-head{ margin-bottom:clamp(1.5rem,4vw,2.5rem); }
+    .sec-head .eyebrow{ display:block; margin-bottom:.7rem; }
+
+    /* Präsentationsflächen für die Logos – flach, nur Haarlinie */
+    .stage{
+      border:1px solid var(--hairline);
+      border-radius:16px;
+      padding:clamp(2.25rem,7vw,5rem);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--white);
+    }
+    .stage--cream{ background:var(--cream); }
+    .stage--dark{
+      background:var(--anthracite);
+      border-color:var(--hairline-d);
+    }
+
+    /* Logo skaliert frei mit dem Container (SVG = vektorbasiert) */
+    .logo{
+      width:100%;
+      max-width:560px;
+      height:auto;
+      display:block;
+      overflow:visible;
+    }
+
+    /* ============================================================
+       RASTER FÜR BILDMARKE / FAVICON / APP-ICON
+       ============================================================ */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
+      gap:clamp(1.25rem,3vw,1.75rem);
+    }
+    .card{
+      border:1px solid var(--hairline);
+      border-radius:16px;
+      padding:clamp(1.75rem,4vw,2.5rem);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      background:var(--white);
+    }
+    .card .frame{
+      width:100%;
+      min-height:170px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:1.1rem;
+    }
+    .iso{ width:auto; height:150px; display:block; }
+    .appicon{ width:150px; height:150px; display:block; border-radius:22%; }
+    .fav-lg{ width:72px; height:72px; display:block; }
+    .fav-row{ display:flex; align-items:flex-end; gap:.85rem; }
+    .fav-32{ width:32px; height:32px; }
+    .fav-16{ width:16px; height:16px; }
+
+    .cap{
+      margin-top:1.5rem;
+      padding-top:1.1rem;
+      border-top:1px solid var(--hairline);
+      width:100%;
+    }
+    .cap .t{ font-weight:600; font-size:.98rem; }
+    .cap .m{ color:var(--taupe); font-size:.82rem; margin-top:.15rem; }
+
+    /* ============================================================
+       FARBPALETTE
+       ============================================================ */
+    .palette{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+      gap:clamp(1rem,2.5vw,1.5rem);
+    }
+    .swatch .chip{
+      height:96px;
+      border-radius:12px;
+      border:1px solid var(--hairline);
+    }
+    .swatch .n{ font-weight:600; font-size:.92rem; margin-top:.85rem; }
+    .swatch .h{ color:var(--taupe); font-size:.82rem; letter-spacing:.04em; }
+
+    /* ============================================================
+       FUSSBEREICH
+       ============================================================ */
+    footer.site{
+      border-top:1px solid var(--hairline);
+      padding-top:2rem;
+      color:var(--taupe);
+      font-size:.85rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem 1.5rem;
+      justify-content:space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- ====================== KOPF ====================== -->
+    <header class="site">
+      <p class="eyebrow">Markenidentität · Logo-System</p>
+      <h1>Leblang&nbsp;Automatisierung</h1>
+      <p class="lead">Ein zeitloses, minimalistisches Logo-System für Unternehmensberatung &amp; KI-Automatisierung – Premium Executive, flaches Vektordesign, ohne Verläufe und Schatten.</p>
+    </header>
+
+    <!-- ============================================================
+         01 · PRIMÄRLOGO (heller Hintergrund)
+         ============================================================ -->
+    <section>
+      <div class="sec-head">
+        <span class="eyebrow">01 — Primärlogo</span>
+        <h2>Hauptlogo auf hellem Hintergrund</h2>
+        <p class="desc">Horizontale Anordnung: Automatisierungs-Symbol links, Wortmarke rechts. Großzügiger Weißraum für eine ruhige, hochwertige Wirkung.</p>
+      </div>
+
+      <div class="stage">
+        <!-- =====================================================
+             PRIMÄRLOGO – vollständige, exportfähige Vektorgrafik
+             ViewBox 650 × 220 · skaliert verlustfrei
+             ===================================================== -->
+        <svg id="lockup-light" class="logo" viewBox="0 0 650 220"
+             role="img" aria-labelledby="ll-title" xmlns="http://www.w3.org/2000/svg">
+          <title id="ll-title">Leblang Automatisierung – Primärlogo</title>
+
+          <!-- Eingebettete, mitexportierte Stildefinitionen der Wortmarke -->
+          <style>
+            #lockup-light text{ font-family: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+            #lockup-light .nm{ font-size:60px; font-weight:700; letter-spacing:3px;   fill:#D8C7B4; }
+            #lockup-light .sb{ font-size:33px; font-weight:500; letter-spacing:.4px;  fill:#1F1F22; }
+            #lockup-light .cl{ font-size:16px; font-weight:400; letter-spacing:1.4px; fill:#A79A8A; }
+          </style>
+
+          <!-- ====== ISOTYP · vertikales Automatisierungs-Symbol ====== -->
+          <g class="isotype">
+            <!-- Drei abgerundete Quadrate (Prozess-Schritte) · dünne anthrazitfarbene Kontur -->
+            <g fill="none" stroke="#1F1F22" stroke-width="2">
+              <rect x="50" y="30"  width="40" height="40" rx="11"/>
+              <rect x="50" y="90"  width="40" height="40" rx="11"/>
+              <rect x="50" y="150" width="40" height="40" rx="11"/>
+            </g>
+            <!-- Durchgehende Verbindungslinie (Warm Beige): beginnt links, läuft durch
+                 alle drei Kästchen und endet rechts im Pfeil · symbolisiert den Prozessfluss -->
+            <path d="M18 50 H62 Q70 50 70 58 V162 Q70 170 78 170 H104"
+                  fill="none" stroke="#D8C7B4" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Pfeilspitze · Output des automatisierten Prozesses -->
+            <path d="M102 162 L126 170 L102 178 Z" fill="#D8C7B4"/>
+          </g>
+
+          <!-- ====== WORTMARKE ====== -->
+          <g class="wordmark">
+            <text class="nm" x="210" y="86">LEBLANG</text>
+            <text class="sb" x="210" y="134">Automatisierung</text>
+            <!-- Slogan · sehr dezent in Taupe -->
+            <text class="cl" x="210" y="172">Prozesse automatisieren. Zeit gewinnen.</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 · NEGATIVVARIANTE (dunkler Anthrazit-Hintergrund)
+         ============================================================ -->
+    <section>
+      <div class="sec-head">
+        <span class="eyebrow">02 — Negativvariante</span>
+        <h2>Variante auf dunklem Anthrazit-Hintergrund</h2>
+        <p class="desc">Für dunkle Anwendungen invertiert: Wortzeile „Automatisierung“ in Creme, Konturen in Taupe – die Beige-Linie und „LEBLANG“ bleiben als Markenakzent erhalten.</p>
+      </div>
+
+      <div class="stage stage--dark">
+        <!-- =====================================================
+             NEGATIVLOGO – eigenständige, exportfähige Vektorgrafik
+             inkl. eigenem anthrazitfarbenem Hintergrund
+             ===================================================== -->
+        <svg id="lockup-dark" class="logo" viewBox="0 0 650 220"
+             role="img" aria-labelledby="ld-title" xmlns="http://www.w3.org/2000/svg">
+          <title id="ld-title">Leblang Automatisierung – Negativvariante</title>
+
+          <style>
+            #lockup-dark text{ font-family: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+            #lockup-dark .nm{ font-size:60px; font-weight:700; letter-spacing:3px;   fill:#D8C7B4; }
+            #lockup-dark .sb{ font-size:33px; font-weight:500; letter-spacing:.4px;  fill:#F3F0EA; }
+            #lockup-dark .cl{ font-size:16px; font-weight:400; letter-spacing:1.4px; fill:#A79A8A; }
+          </style>
+
+          <!-- Eigener Hintergrund für eigenständigen Export -->
+          <rect x="0" y="0" width="650" height="220" fill="#1F1F22"/>
+
+          <!-- ====== ISOTYP ====== -->
+          <g class="isotype">
+            <!-- Quadrate auf Dunkel: Kontur in Taupe für dezente Lesbarkeit -->
+            <g fill="none" stroke="#A79A8A" stroke-width="2">
+              <rect x="50" y="30"  width="40" height="40" rx="11"/>
+              <rect x="50" y="90"  width="40" height="40" rx="11"/>
+              <rect x="50" y="150" width="40" height="40" rx="11"/>
+            </g>
+            <!-- Verbindungslinie bleibt Warm Beige -->
+            <path d="M18 50 H62 Q70 50 70 58 V162 Q70 170 78 170 H104"
+                  fill="none" stroke="#D8C7B4" stroke-width="3"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M102 162 L126 170 L102 178 Z" fill="#D8C7B4"/>
+          </g>
+
+          <!-- ====== WORTMARKE ====== -->
+          <g class="wordmark">
+            <text class="nm" x="210" y="86">LEBLANG</text>
+            <text class="sb" x="210" y="134">Automatisierung</text>
+            <text class="cl" x="210" y="172">Prozesse automatisieren. Zeit gewinnen.</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 · BILDMARKE / FAVICON / APP-ICON
+         ============================================================ -->
+    <section>
+      <div class="sec-head">
+        <span class="eyebrow">03 — Anwendungen</span>
+        <h2>Isotyp, Favicon &amp; App-Icon</h2>
+        <p class="desc">Die Bildmarke funktioniert eigenständig und bleibt bis in kleinste Größen erkennbar – jedes Asset ist eine separate, skalierbare SVG-Datei.</p>
+      </div>
+
+      <div class="grid">
+
+        <!-- ---------- ISOTYP ALLEIN ---------- -->
+        <div class="card">
+          <div class="frame">
+            <!-- =====================================================
+                 ISOTYP · eigenständige Bildmarke · ViewBox 140 × 220
+                 ===================================================== -->
+            <svg class="iso" viewBox="0 0 140 220" role="img" aria-labelledby="iso-title"
+                 xmlns="http://www.w3.org/2000/svg">
+              <title id="iso-title">Leblang Automatisierung – Bildmarke</title>
+              <g class="isotype">
+                <!-- Drei abgerundete Quadrate · anthrazitfarbene Kontur -->
+                <g fill="none" stroke="#1F1F22" stroke-width="2">
+                  <rect x="50" y="30"  width="40" height="40" rx="11"/>
+                  <rect x="50" y="90"  width="40" height="40" rx="11"/>
+                  <rect x="50" y="150" width="40" height="40" rx="11"/>
+                </g>
+                <!-- Prozesslinie in Warm Beige mit Pfeil -->
+                <path d="M18 50 H62 Q70 50 70 58 V162 Q70 170 78 170 H104"
+                      fill="none" stroke="#D8C7B4" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M102 162 L126 170 L102 178 Z" fill="#D8C7B4"/>
+              </g>
+            </svg>
+          </div>
+          <div class="cap">
+            <div class="t">Isotyp</div>
+            <div class="m">Bildmarke · SVG · vektorbasiert</div>
+          </div>
+        </div>
+
+        <!-- ---------- FAVICON ---------- -->
+        <div class="card">
+          <div class="frame">
+            <!-- =====================================================
+                 FAVICON · kompakte Bildmarke im Quadrat · 64 × 64
+                 Monochrome Beige-Marke auf Anthrazit für maximale
+                 Erkennbarkeit im Browser-Tab.
+                 ===================================================== -->
+            <svg class="fav-lg" viewBox="0 0 64 64" role="img" aria-labelledby="fav-title"
+                 xmlns="http://www.w3.org/2000/svg">
+              <title id="fav-title">Leblang Automatisierung – Favicon</title>
+              <rect width="64" height="64" rx="14" fill="#1F1F22"/>
+              <g fill="none" stroke="#D8C7B4" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <rect x="16" y="3"  width="16" height="16" rx="4.5"/>
+                <rect x="16" y="24" width="16" height="16" rx="4.5"/>
+                <rect x="16" y="45" width="16" height="16" rx="4.5"/>
+                <path d="M8 11 H24 V53 H44"/>
+              </g>
+              <path d="M44 49 L54 53 L44 57 Z" fill="#D8C7B4"/>
+            </svg>
+
+            <!-- Größenvorschau 32 px & 16 px -->
+            <div class="fav-row">
+              <svg class="fav-32" viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <rect width="64" height="64" rx="14" fill="#1F1F22"/>
+                <g fill="none" stroke="#D8C7B4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="16" y="3"  width="16" height="16" rx="4.5"/>
+                  <rect x="16" y="24" width="16" height="16" rx="4.5"/>
+                  <rect x="16" y="45" width="16" height="16" rx="4.5"/>
+                  <path d="M8 11 H24 V53 H44"/>
+                </g>
+                <path d="M44 49 L54 53 L44 57 Z" fill="#D8C7B4"/>
+              </svg>
+              <svg class="fav-16" viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <rect width="64" height="64" rx="14" fill="#1F1F22"/>
+                <g fill="none" stroke="#D8C7B4" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="16" y="3"  width="16" height="16" rx="4.5"/>
+                  <rect x="16" y="24" width="16" height="16" rx="4.5"/>
+                  <rect x="16" y="45" width="16" height="16" rx="4.5"/>
+                  <path d="M8 11 H24 V53 H44"/>
+                </g>
+                <path d="M44 49 L54 53 L44 57 Z" fill="#D8C7B4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cap">
+            <div class="t">Favicon</div>
+            <div class="m">64 · 32 · 16 px · live im Tab aktiv</div>
+          </div>
+        </div>
+
+        <!-- ---------- APP-ICON ---------- -->
+        <div class="card">
+          <div class="frame">
+            <!-- =====================================================
+                 APP-ICON · 512 × 512 · abgerundetes Anthrazit-Feld
+                 mit zentrierter Beige-Bildmarke (Maßstab 5,5×).
+                 ===================================================== -->
+            <svg class="appicon" viewBox="0 0 512 512" role="img" aria-labelledby="app-title"
+                 xmlns="http://www.w3.org/2000/svg">
+              <title id="app-title">Leblang Automatisierung – App-Icon</title>
+              <!-- Hintergrundfeld -->
+              <rect width="512" height="512" rx="112" fill="#1F1F22"/>
+              <!-- Bildmarke, zentriert skaliert -->
+              <g transform="translate(86 80) scale(5.5)"
+                 fill="none" stroke="#D8C7B4" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <rect x="16" y="3"  width="16" height="16" rx="4.5"/>
+                <rect x="16" y="24" width="16" height="16" rx="4.5"/>
+                <rect x="16" y="45" width="16" height="16" rx="4.5"/>
+                <path d="M8 11 H24 V53 H44"/>
+              </g>
+              <path d="M328 350 L383 372 L328 394 Z" fill="#D8C7B4"/>
+            </svg>
+          </div>
+          <div class="cap">
+            <div class="t">App-Icon</div>
+            <div class="m">512 px · abgerundetes Quadrat</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 · FARBPALETTE
+         ============================================================ -->
+    <section>
+      <div class="sec-head">
+        <span class="eyebrow">04 — Farbwelt</span>
+        <h2>Farbpalette</h2>
+        <p class="desc">Warme, zeitlose Neutraltöne – bewusst ohne typische „KI-Farben“, ohne Verläufe.</p>
+      </div>
+
+      <div class="palette">
+        <div class="swatch">
+          <div class="chip" style="background:#1F1F22"></div>
+          <div class="n">Anthrazit</div>
+          <div class="h">#1F1F22</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#D8C7B4"></div>
+          <div class="n">Warm Beige</div>
+          <div class="h">#D8C7B4</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#A79A8A"></div>
+          <div class="n">Taupe</div>
+          <div class="h">#A79A8A</div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#F3F0EA"></div>
+          <div class="n">Creme</div>
+          <div class="h">#F3F0EA</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FUSS ====================== -->
+    <footer class="site">
+      <span>Leblang Automatisierung — Logo-System</span>
+      <span>Reines HTML + SVG · skalierbar · exportfähig für Web &amp; Druck</span>
+    </footer>
+
+  </div>
+</body>
+</html>
